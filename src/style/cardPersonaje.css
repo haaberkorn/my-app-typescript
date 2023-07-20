@@ -1,0 +1,36 @@
+.Personaje_Caja{
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px rgb(42, 41, 41);
+   /*  border: solid 0.09rem; */
+    border-radius: 1rem;  
+    width: 300px;
+    background-color: rgb(227, 113, 128);
+    height: auto;
+    
+    
+}
+.Personaje_Img{
+    border-radius: 1rem;
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-self: center;
+    box-shadow: 5px 5px 5px rgb(42, 41, 41);
+    margin-top: 1rem;
+}
+.Personaje_Texto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    text-align: justify;
+    text-overflow: ellipsis; 
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;  
+    padding: 1rem;
+    
+}
