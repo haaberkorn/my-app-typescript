@@ -11,7 +11,7 @@ const ListPersonaje = () => {
   };
   useEffect(() => {
     obtenerListPersonajes();
-  }, []);
+  }, [setPaginas]);
 
   return (
     <>

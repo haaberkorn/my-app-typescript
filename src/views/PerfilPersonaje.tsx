@@ -6,8 +6,8 @@ import "../style/perfilPersojane.css";
 
 const PerfilPersonaje = () => {
   const location = useLocation();
-  const id = location.state.id;
-  const listaPersonajes:Array<Personaje> = location.state.personajes;
+  const id = location.state?.id;
+  const listaPersonajes:Array<Personaje> = location.state?.personajes || [];
 
   const [personaje, setPersonaje] = useState<Personaje>();
   const [positionPersonaje, setPositionPersonaje] = useState(0);

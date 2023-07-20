@@ -1,20 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+/* import reportWebVitals from './reportWebVitals'; */
 
-import {
+/* import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
-
+} from "react-router-dom"; */
+import './index.css';
+import App from './App';
 import PerfilPersonaje from './views/PerfilPersonaje';
+import Home from './views/Home';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}/>
+      <Route path ="home" element={<Home />}/>
+      <Route path ="perfil" element={<PerfilPersonaje />}/>
+    </Routes>
+  </BrowserRouter>
 
-const router = createBrowserRouter([
+
+
+
+
+)
+/* const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
@@ -23,9 +37,9 @@ const router = createBrowserRouter([
     path: "/perfil",
     element: <PerfilPersonaje/>,
   },
-]);
+]); */
 
-root.render(
+/* root.render(
   
   <React.StrictMode>
     <RouterProvider router={router} />
@@ -33,4 +47,4 @@ root.render(
 );
 
 
-reportWebVitals();
+reportWebVitals(); */
