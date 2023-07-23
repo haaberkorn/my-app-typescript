@@ -33,13 +33,22 @@ const Home = () => {
   });
 
   const siguientePagina = () => {
-    setPaginas(paginas + 1);
+    paginas >= 78 ? setPaginas(0): setPaginas(paginas + 1)
     obtenerPersonajes(paginas + 1);
   };
+
   const anteriorPagina = () => {
-    setPaginas(paginas - 1);
+    setPaginas(paginas - 1)
     obtenerPersonajes(paginas - 1);
   };
+  const primeraPagina = () => {
+    setPaginas(0)
+    obtenerPersonajes(0)
+  }
+  const ultimaPagina = () =>{
+    setPaginas(78)
+    obtenerPersonajes(78)
+  }
 
   function mostrarError() {
     setError("No se puede mostrar la informacion por los momentos...");
@@ -63,13 +72,13 @@ const Home = () => {
 
   return (
     <>
-      <main>
+      <main className="main">
         <div className="Home_main">
           {personajes.map((element) => {
             return (
               <CardPersonaje
                 name={element.name}
-                description={element.description}
+                //description={element.description}
                 imagen={element.imagen}
                 id={element.id}
                 seleccionarPersonaje={(name:string) => {
@@ -81,11 +90,16 @@ const Home = () => {
               />
             );
           })}
-          {paginas !== 0 && <button onClick={anteriorPagina}>Anterior</button>}
-          <span>{paginas}</span>
 
-          <button onClick={siguientePagina}>Siguiente</button>
         </div>
+        <div className="botones">
+            <button onClick={ultimaPagina}>Ultima Pagina</button>
+            {paginas !== 0 && <button onClick={anteriorPagina}>Anterior</button>}
+            <span>{paginas}</span>
+
+            <button onClick={siguientePagina}>Siguiente</button>
+            <button onClick={primeraPagina}>Primera Pagina</button>
+          </div>
       </main>
     </>
   );

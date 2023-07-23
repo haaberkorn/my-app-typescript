@@ -3,10 +3,10 @@ import MarvelApi from "../services/services";
 
 const ListPersonaje = () => {
   const api = new MarvelApi();
-  const [paginas, setPaginas] = useState([]);
+  const [paginas, setPaginas] = useState([0]);
 
   const obtenerListPersonajes = async () => {
-    const Listcharacters = await api.obtenerPersonajes();
+    const Listcharacters = await api.obtenerPersonajes(0);
     setPaginas(Listcharacters);
   };
   useEffect(() => {
@@ -17,7 +17,7 @@ const ListPersonaje = () => {
     <>
       <button
         onClick={() =>
-          paginas.length >= 20 ? setPaginas(1) : setPaginas(paginas.length + 1)
+          paginas.length >= 20 ? setPaginas([1]) : setPaginas([...paginas, paginas.length + 1])
         }
       >
         siguiente

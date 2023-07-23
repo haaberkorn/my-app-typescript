@@ -15,7 +15,7 @@
     border-radius: 1rem;
     display: flex;
     width: 180px;
-    height: 180px;
+    height: 200px;
     align-self: center;
     box-shadow: 5px 5px 5px rgb(42, 41, 41);
     margin-top: 1rem;
@@ -26,11 +26,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    text-align: justify;
-    text-overflow: ellipsis; 
+    text-align: justify; 
     color: white;
     font-weight: 600;
-    font-size: 0.9rem;  
+    font-size: 0.65rem;  
     padding: 1rem;
     
 }

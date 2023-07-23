@@ -4,13 +4,18 @@ import CardPersonaje from "../components/CardPersonaje";
 import Personaje from "../types/personaje";
 import "../style/perfilPersojane.css";
 
+
+
+
 const PerfilPersonaje = () => {
+ 
   const location = useLocation();
   const id = location.state?.id;
   const listaPersonajes:Array<Personaje> = location.state?.personajes || [];
 
   const [personaje, setPersonaje] = useState<Personaje>();
   const [positionPersonaje, setPositionPersonaje] = useState(0);
+  
 
   const buscarPersonaje = () => {
     for (let index = 0; index <= listaPersonajes.length - 1; index++) {
