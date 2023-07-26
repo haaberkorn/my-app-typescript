@@ -90,6 +90,7 @@ const Home = () => {
               />
             );
           })}
+
         </div>
         <div className="botones">
             <button onClick={ultimaPagina}>Ultima Pagina</button>
