@@ -5,17 +5,16 @@
     box-shadow: 5px 5px 5px rgb(42, 41, 41);
    /*  border: solid 0.09rem; */
     border-radius: 1rem;  
-    width: 300px;
+    width: 20%;
     background-color: rgb(227, 113, 128);
     height: auto;
-    
     
 }
 .Personaje_Img{
     border-radius: 1rem;
     display: flex;
-    width: 180px;
-    height: 200px;
+    width: 50%;
+    height: 60%;
     align-self: center;
     box-shadow: 5px 5px 5px rgb(42, 41, 41);
     margin-top: 1rem;
@@ -29,7 +28,7 @@
     text-align: justify; 
     color: white;
     font-weight: 600;
-    font-size: 0.65rem;  
+    font-size: auto;  
     padding: 1rem;
     
 }

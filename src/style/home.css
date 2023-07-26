@@ -1,20 +1,24 @@
 /* .main{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 } */
 .Home_main{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%  ;
-    /* grid-template-columns: repeat(auto-fill, 300px); */
-    background-color: rgba(197, 114, 114, 0.485);
-/*     display: flex;
-    flex-direction: row; */
+    display: flex;
+    flex-direction: row;
+   
     justify-content: space-evenly;
+    
+    background-color: rgba(197, 114, 114, 0.485);
+    
+
+    
     flex-wrap: wrap;
     gap: 0.8rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    height: 100%;
+    
+   
    
 }
 .botones{
@@ -22,7 +26,7 @@
     display: flex;
     
     flex-direction: row;
-    background-color: rgba(197, 114, 114, 0.485);
+  /*   background-color: rgba(197, 114, 114, 0.485); */
 }
 .botones span{
     padding-right: 2rem;
